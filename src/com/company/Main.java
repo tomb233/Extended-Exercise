@@ -2,8 +2,7 @@ package com.company;
 import java.util.Scanner;
 //Written By Tom Buckle
 //Week 1- Eulids Algorithm
-//Version 1.1
-//This version will aim to make code more elegant
+//Version 1
 public class Main {
 
     static int input1;
@@ -55,20 +54,20 @@ public class Main {
     }
 //Start of Main program
     public static void main(String[] args) {
-	    int x = 1;
-        int counter = 1;
-        getInput();
-        System.out.println("input received");
-        while (x == 1){
-            if(counter > 999999){
-                System.out.println("Fatal error!! Exiting before system crash");
-                System.exit(-1);
-            }
-            System.out.println("Currently on pass "+ counter);
-            evaluate(input1,input2);
-            findDifference(input1,input2);
-            replaceNumbers();
-            counter++;
+	               int x = 1;
+            int counter = 1;
+            getInput();
+            System.out.println("input received");
+            while (x == 1){
+                if(counter > 999999){
+                    System.out.println("Fatal error!! Exiting before system crash");
+                    System.exit(-1);
+                }
+                System.out.println("Currently on pass "+ counter);
+                evaluate(input1,input2);
+                findDifference(input1,input2);
+                replaceNumbers();
+                counter++;
 
         }
     }
