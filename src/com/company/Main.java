@@ -4,7 +4,7 @@ import java.util.Scanner;
 //Week 1- Eulids Algorithm
 //Version 1
 public class Main {
-
+    static int counter = 1;
     static int input1;
     static int input2;
     static int difference;
@@ -41,10 +41,10 @@ public class Main {
         difference = Math.abs(x-y);
     }//Finds the difference between both numbers submitted by the user.
 
-    public static void replaceNumbers(){
+    public static int replaceNumbers(){
         input1 = smallest;
         input2 = difference;
-
+        return difference;
     }
 
     public static void foundAnswer(){
@@ -52,21 +52,32 @@ public class Main {
         System.out.println(input1 + " is the largest common denominator");
         System.exit(0);
     }
+
+    public static void counter(){
+
+        if(counter > 999999){
+            System.out.println("Fatal error!! Exiting before system crash");
+            System.exit(-1);
+        }
+    }
+
+    public static int gcd(int i1,int i2) {
+        evaluate(i1,i2);
+        findDifference(i1,i2);
+        int x = replaceNumbers();
+        return x;
+    }
 //Start of Main program
     public static void main(String[] args) {
 	               int x = 1;
-            int counter = 1;
+
             getInput();
-            System.out.println("input received");
+
             while (x == 1){
-                if(counter > 999999){
-                    System.out.println("Fatal error!! Exiting before system crash");
-                    System.exit(-1);
-                }
+                counter();
                 System.out.println("Currently on pass "+ counter);
-                evaluate(input1,input2);
-                findDifference(input1,input2);
-                replaceNumbers();
+               int y = gcd(input1,input2);
+                System.out.println("Largest common denominator currently is "+ y);
                 counter++;
 
         }
