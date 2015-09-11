@@ -2,7 +2,8 @@ package com.company;
 import java.util.Scanner;
 //Written By Tom Buckle
 //Week 1- Eulids Algorithm
-//Version 1.0
+//Version 1.1
+//This version will aim to make code more elegant
 public class Main {
 
     static int input1;
