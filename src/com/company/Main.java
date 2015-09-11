@@ -60,7 +60,7 @@ public class Main {
         System.out.println("input received");
         while (x == 1){
             if(counter > 999999){
-                System.out.println("Fatal error! Exiting before system crash");
+                System.out.println("Fatal error!! Exiting before system crash");
                 System.exit(-1);
             }
             System.out.println("Currently on pass "+ counter);
