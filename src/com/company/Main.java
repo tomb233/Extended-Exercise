@@ -34,7 +34,7 @@ public class Main {
 
             foundAnswer();
         }
-
+        
     } //Evaluates the two numbers and decides which is the smallest or if they are equal to eachother
 
     public static void findDifference (int x, int y){
