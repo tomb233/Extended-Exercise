@@ -67,19 +67,36 @@ public class Main {
         int x = replaceNumbers();
         return x;
     }
+
+    public static void test(){
+
+
+    }
 //Start of Main program
     public static void main(String[] args) {
-	               int x = 1;
+
+
+
+        if(args.length > 0){
+            if("--test".equals(args[0])){
+                System.out.println("--test argument found. Initiating test...");
+                System.out.println("Test Begining...");
+            }
+
+        }else{
+            int x = 1;
 
             getInput();
-
             while (x == 1){
                 counter();
                 System.out.println("Currently on pass "+ counter);
-               int y = gcd(input1,input2);
+                int y = gcd(input1,input2);
                 System.out.println("Largest common denominator currently is "+ y);
                 counter++;
 
+            }
         }
+
+
     }
 }
