@@ -2,7 +2,7 @@ package com.company;
 import java.util.Scanner;
 //Written By Tom Buckle
 //Week 1- Eulids Algorithm
-//Version 1
+//Version 2
 public class Main {
     static int counter = 1;
     static int input1;
