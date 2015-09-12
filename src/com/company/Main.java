@@ -43,11 +43,11 @@ public class Main {
     public static void test(){
 
         int passRate = 0;
-        int totalTests = 0;
+        int totalTests = 5;
         int percentageCorrect = 0;
 
         System.out.println("Argument --test found. Initiating test...");
-        System.out.println("Test Begining...");
+        System.out.println("Test Beginning...");
 
         int[] array1 = {12,49,252,24,462};
         int[] array2 = {8,21,105,60,1071};
@@ -62,12 +62,19 @@ public class Main {
             answer = gcd(input1,input2);
 
 
-            System.out.println("Test "+(x+1)+": gcd("+array1[x]+", "+array2[x]+") = " + answer);
+            System.out.print("Test "+(x+1)+": gcd("+array1[x]+", "+array2[x]+") = " + answer);
+
             if(answer == array3[x]){
                 passRate = passRate + 1;
+                System.out.println(" PASS");
+            }else{
+
+                System.out.println(" FAIL: Expected " + array3[x]);
             }
         }
-
+        System.out.println(passRate);
+        System.out.println(totalTests);
+        percentageCorrect = passRate * 100 / totalTests;
         System.out.println("Passed "+passRate+" out of "+totalTests+" tests. Score = "+percentageCorrect+"%.");
 
     }
