@@ -62,14 +62,56 @@ public class Main {
     }
 
     public static int gcd(int i1,int i2) {
+
         evaluate(i1,i2);
         findDifference(i1,i2);
         int x = replaceNumbers();
         return x;
     }
+    public static int gcdTest(int i1,int i2){
+        int c = 1;
+        int x = 0;
+        while(c == 1){
+            evaluate(i1,i2);
+            findDifference(i1,i2);
+             x = replaceNumbers();
+            if(input1 == difference || input2 == difference){
+                c = 2;
+            }
+        }
+
+        return x;
+    }
 
     public static void test(){
 
+        int passRate = 0;
+        int totalTests = 0;
+        int percentageCorrect = 0;
+
+        System.out.println("Argument --test found. Initiating test...");
+        System.out.println("Test Begining...");
+
+        int[] array1 = {12,49,252,24,462};
+        int[] array2 = {8,21,105,60,1071};
+        int[] array3 = {4,7,21,12,21};
+        int answer = 0;
+        for (int x = 0;x<5;x++){
+
+            input1 = array1[x];
+            input2 = array2[x];
+
+
+            answer  = gcdTest(input1,input2);
+            System.out.println(answer);
+
+            System.out.println("Test "+(x+1)+": gcd("+array1[x]+", "+array2[x]+") = " + answer);
+            if(answer == array3[x]){
+                passRate = passRate + 1;
+            }
+        }
+
+        System.out.println("Passed "+passRate+" out of "+totalTests+" tests. Score = "+percentageCorrect+"%.");
 
     }
 //Start of Main program
@@ -79,8 +121,8 @@ public class Main {
 
         if(args.length > 0){
             if("--test".equals(args[0])){
-                System.out.println("--test argument found. Initiating test...");
-                System.out.println("Test Begining...");
+                test();
+
             }
 
         }else{
