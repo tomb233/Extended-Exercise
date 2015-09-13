@@ -1,9 +1,12 @@
 package com.company;
 import java.util.Scanner;
+
 //Written By Tom Buckle
 //Week 1- Eulids Algorithm
 //Version 2
 public class Main {
+    static AutoRunFromConsole test = new AutoRunFromConsole();
+
     static int counter = 1;
     static int input1;
     static int input2;
@@ -81,7 +84,7 @@ public class Main {
 //Start of Main program
     public static void main(String[] args) {
 
-
+        test.runYourselfInConsole(true);
 
         if(args.length > 0){
             if("--test".equals(args[0])){
